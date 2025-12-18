@@ -22,7 +22,7 @@ O teste foi conduzido em uma rede isolada, garantindo a ética e a segurança da
 | Sistema | Sistema Operacional | IP (Rede Interna) | Função |
 | :--- | :--- | :--- | :--- |
 | **Atacante (Attacker)** | Kali Linux | `192.168.100.10` | Execução do Listener e Geração do Payload |
-| **Alvo (Target)** | Windows 7 / XP | `192.168.100.20` | Máquina Alvo com vulnerabilidade simulada (Execução Inadvertida) |
+| **Alvo (Target)** | Windows 7  | `192.168.100.20` | Máquina Alvo com vulnerabilidade simulada (Execução Inadvertida) |
 
 * **Virtualização:** Oracle VirtualBox.
 * **Rede:** Configurada em modo "Rede Interna" para isolamento completo.
